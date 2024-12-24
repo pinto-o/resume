@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinsuda Phongpun - Portfolio</title>
+    <style>
+        /* CSS ตกแต่ง */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background:rgb(50, 50, 50);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background:gray;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .circle-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        .divider {
+            border-top: 2px solid #ccc;
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            background: rgb(51, 51, 51);
+            color: white;
+            padding: 10px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav .hamburger {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pinsuda Phongpun</h1>
+    </header>
+    <nav>
+        <span class="hamburger">☰</span>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#employment">Employment History</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <img src="pin.jpg" alt="Profile Picture" class="circle-img">
+            <p>
+                ชื่อ: <strong>Pinsuda Phongpun</strong><br>
+                สาขาวิชา: <em>Digital and Information Technology</em><br>
+                คณะ: คณะวิศวกรรมศาสตร์<br>
+                สถาบัน: <a href="http://pim.ac.th" target="_blank">PANYAPIWAT INSTITUTE OF MANAGEMENT</a>
+            </p>
+            <!-- เพิ่มประวัติโดยย่อที่นี่ -->
+        </section>
+        <div class="divider"></div>
+        <section id="education">
+            <h2>Education</h2>
+            <p>Panyapiwat Institute of Management - EEC CAMPUS</p>
+            <p>Faculty : Engineering and Technology</p>
+            <p>Major : Digital and Information Technology</p>
+            <p>GPAX  : 4.00</p>
+        </section>
+        <div class="divider"></div>
+        <section id="employment">
+            <h2>Employment History</h2>
+            <p>March-May 2024</p>
+            <p>CP ALL PUBLIC COMPANY LIMITED</p>
+            <p>Trainee / 7-11 Store</p>
+            <p>Greet customers warmly and provide excellent customer service.</p>
+            <p>Learn to work systematically and working together as a team, including taking responsibility for one's own work duties</p>
+        </section>
+        <div class="divider"></div>
+        <section id="skills">
+            <h2>Skills</h2>
+            <h3>Soft Skill</h3>
+            <p>- Communication</p>
+            <p>- Teamwork</p>
+            <p>- Presentation</p>
+            <h3>Hard Skill</h3>
+            <p>- JAVA(Beginner)</p>
+            <p>- SQL(Beginner)</p>
+            <p>- HTML(Beginner)</p>
+            <p>- CSS(Beginner)</p>
+            <p>-JAVASCRIPT(Beginner)</p>
+        </section>
+        <div class="divider"></div>
+        <section id="contact">
+            <h2>Contact</h2>
+            <ol>
+                <li>Email: pinsuda[at]pim.ac.th</li>
+                <li>Phone: 081-999-9999</li>
+            </ol>
+        </section>
+    </div>
+    <footer>
+        <p>© 2024 Pinsuda Phongpun. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle Menu
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('nav ul');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
